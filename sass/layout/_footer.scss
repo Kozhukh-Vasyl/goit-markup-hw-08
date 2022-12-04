@@ -1,0 +1,101 @@
+/* --- FOOTER --- */
+.footer {
+    background: var(--accent-bgc);
+    padding-top: 60px;
+    padding-bottom: 60px;  
+}
+
+
+.footer-container {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    width: 100%;
+    
+    @media screen and (max-width: 480px) {
+          
+            justify-content: center;
+            text-align: center;
+        }
+    @media screen and (min-width: 768px) {
+            
+            justify-content: center;
+            text-align: center;
+        }
+    
+    @media screen and (min-width: 1200px) {
+            max-width: 1200px;
+            align-items: baseline;
+            justify-content: space-between;
+        } 
+}
+
+.footer-tablet {   
+ @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        margin-bottom: 60px;
+            }
+
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            gap: 70px;
+            text-align: left;
+            align-items: baseline;
+            justify-content: space-between;
+            margin: 0;
+            max-width: 510px;
+            &.container {
+                padding: 0;
+            }
+                
+            }
+
+}
+
+.contacts, 
+.container-socials {
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+        
+    }
+    @media screen and (min-width: 1200px) {
+        
+       
+        justify-content: space-around;           
+    }       
+}
+
+.footer-item:not(:last-child) {
+    font-style: normal;
+    margin-bottom: 9px;
+}
+
+.footer-item-link {
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--primary-background-color);
+}
+
+.footer-mail-link,
+.footer-tel-link {
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--link-color);
+
+    transition: var(--trans);
+    &:hover,
+    &:focus {
+            color: var(--accent-text-color);
+        }
+}
+
+.adress-title {
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--primary-background-color);
+}

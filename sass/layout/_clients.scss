@@ -1,0 +1,52 @@
+/* --- Clients --- */
+
+.test-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.test-item {
+    height: 90px;
+    width: 100%;
+       
+    @media screen and (min-width: 480px) {
+            width: calc((100% - 30px) / 2);
+        }
+        
+     @media screen and (min-width: 768px) {
+         width: calc((100% - 60px) / 3);
+            }
+        
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 150px) / 6);
+         }
+}
+
+.test-link {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--bcg-icon);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: border;
+    @extend %transition-properties;
+    &:hover,
+    &:focus {
+            border: 1px solid var(--accent-text-color);
+        }
+}
+
+.test-soc-icon {
+    fill: var(--bcg-icon);
+    transition-property: fill;
+    @extend %transition-properties;
+    .test-link:hover & {
+            fill: var(--accent-text-color);
+        }
+    .test-link:focus &{
+            fill: var(--accent-text-color);
+        }
+}

@@ -1,0 +1,56 @@
+/* --- FEATURE --- */
+
+
+.feature__icon {
+    height: 120px;
+    background-color: var(--second-backgraund-color);
+    border-radius: 4px;
+    display: block;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature__title {
+    @include font(14px , 1.14 , null, 0.03em);
+    // font-size: inherit;
+    // line-height: 1.14;
+    // letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+    }
+
+}
+
+.feature__list,
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.featute__text {
+    @include font(null, 1.71, null, 0.03em);
+    // line-height: 1.71;
+    // letter-spacing: 0.03em;
+    color: var(--primary-text);
+}
+
+
+.feature__item {
+    width: 100%;
+    // width: calc((100% - 90px) / 4);
+    
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 90px) / 4);
+    }
+}
